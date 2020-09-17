@@ -12,13 +12,7 @@ defined('_JEXEC') or die('Restricted access');
 $doc = JFactory::getDocument();
 
 ?>
-<style>
 
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-}
-</style>
 <?php 
 
 $doc = JFactory::getDocument();
