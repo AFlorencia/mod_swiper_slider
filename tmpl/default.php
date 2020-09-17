@@ -24,6 +24,7 @@ $doc = JFactory::getDocument();
      $bgpos = $params->get('bgpos');
      $bgpossm = $params->get('bgpossm');
      $fade = $params->get('fade',0);
+     $contentbgcolor = $params->get('content-bg-color');
      $titleColor = $params->get('title-color');
      $titleSize = $params->get('title-size');
      $titleSizeSmall = $params->get('title-size-sm');
@@ -39,6 +40,7 @@ $doc = JFactory::getDocument();
           height:'.$ht.';}';
         
         $style .= '.swiper-slide{ background-repeat: no-repeat;background-position: '.$bgpos.';}'.PHP_EOL;
+        $style .= '.swiper-slide .content{ background-color: '.$contentbgcolor.';}'.PHP_EOL;
         
         $style .= '.swiper-slide h1{font-size:'.$titleSize.'; color:'.$titleColor.'; }'.PHP_EOL;
         

@@ -82,6 +82,8 @@
 <field type="spacer" name="spacertitle" label="&lt;h1&gt;Estilos&lt;/h1&gt;" class="text-info"/>
 <field type="spacer" name="spacerline" hr="true" class="myhr"/>
 
+<field name="content-bg-color" type="text" label="Content Bg Color" default="rgba(0,0,0,0.4)"/>
+
 <field name="title-color" type="color" label="Header Color" default="#fff"/>
 <field name="title-size" type="text" label="Header size" default="3em"/>
 <field name="title-size-sm" type="text" label="Header size small" default="1.5em"/>
