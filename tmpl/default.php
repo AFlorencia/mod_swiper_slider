@@ -34,27 +34,31 @@ $doc = JFactory::getDocument();
      
      $buttonSize = ($params->get('button-size')) ? 'btn-'.$params->get('button-size'): '';
   
-$style = '.swiper-container {
-  width: 100%;
-  height:'.$ht.';}';
-
-  $style .= '.swiper-slide{ background-repeat: no-repeat;background-position: '.$bgpos.';}';
-
-$style .= '.swiper-slide h1{font-size:'.$titleSize.'; color:'.$titleColor.'; }'.PHP_EOL;
-$style .= '.swiper-slide .introtext{font-size:'.$textSize.'; color:'.$textColor.';}';
-
-  $style.='@media(max-width:1024px) and (orientation:portrait){';
-    $style .= '.swiper-slide{background-position: '.$bgpossm.';}';
-
-    $style .= '.swiper-container {
-    
-      height:'.$htsm.';}';
-
-      $style .= '.swiper-slide h1{font-size:'.$titleSizeSmall.'; }';
-      $style .= '.swiper-slide .introtext{font-size: 16px;}';
-      $style .= '.swiper-slide .btn{ padding: 8px 12px; font-size:90%}';
-      $style .= '.swiper-button-next, .swiper-button-prev{display:none;}';
-  $style .='}';
+        $style = '.swiper-container {
+          width: 100%;
+          height:'.$ht.';}';
+        
+        $style .= '.swiper-slide{ background-repeat: no-repeat;background-position: '.$bgpos.';}'.PHP_EOL;
+        
+        $style .= '.swiper-slide h1{font-size:'.$titleSize.'; color:'.$titleColor.'; }'.PHP_EOL;
+        
+        $style .= '.swiper-slide .introtext{font-size:'.$textSize.'; color:'.$textColor.';}'.PHP_EOL.PHP_EOL;
+        
+        $style.='@media(max-width:1024px) and (orientation:portrait){'.PHP_EOL.PHP_EOL;
+        
+        $style .= '.swiper-slide{background-position: '.$bgpossm.';}'.PHP_EOL;
+        
+        $style .= '.swiper-container { height:'.$htsm.';}'.PHP_EOL;
+        
+        $style .= '.swiper-slide h1{font-size:'.$titleSizeSmall.'; }'.PHP_EOL;
+        
+        $style .= '.swiper-slide .introtext{font-size: 16px;}'.PHP_EOL;
+        
+        $style .= '.swiper-slide .btn{ padding: 8px 12px; font-size:90%;}'.PHP_EOL;
+        
+        $style .= '.swiper-button-next, .swiper-button-prev{display:none;}'.PHP_EOL;
+        
+        $style .='}'.PHP_EOL;
 
 
 
@@ -113,19 +117,21 @@ if(empty($item))
         
         
 $style .= '.slide-'.$i.'{';
-$style .='background-image: url('.$bg.'); ';
+$style .='background-image: url('.$bg.'); '.PHP_EOL;
 
-$style .='}';
+$style .='}'.PHP_EOL;
 
 
 
 $style.='@media(max-width:1024px) and (orientation:portrait){';
   
     
-     $style .='.slide-'.$i.'{background-image: url('.$bgsm.');';
-     $style .='background-position:'.$bgpossm.';';
+     $style .='.slide-'.$i.'{background-image: url('.$bgsm.');'.PHP_EOL;
+     $style .='background-position:'.$bgpossm.';'.PHP_EOL;
     
-    $style .='}}';
+    $style .='}'.PHP_EOL;
+  
+  $style .= '}'.PHP_EOL;
         ?>
         <?php $i++; endforeach; ?>
     </div>
