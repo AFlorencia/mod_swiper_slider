@@ -38,10 +38,14 @@ $style = '.swiper-container {
   width: 100%;
   height:'.$ht.';}';
 
+  $style .= '.swiper-slide{background-position: '.$bgpos.';}';
+
 $style .= '.swiper-slide h1{font-size:'.$titleSize.'; color:'.$titleColor.'; }'.PHP_EOL;
 $style .= '.swiper-slide .introtext{font-size:'.$textSize.'; color:'.$textColor.';}';
 
   $style.='@media(max-width:1024px) and (orientation:portrait){';
+    $style .= '.swiper-slide{background-position: '.$bgpossm.';}';
+
     $style .= '.swiper-container {
     
       height:'.$htsm.';}';
@@ -109,7 +113,7 @@ if(empty($item))
         
         
 $style .= '.slide-'.$i.'{';
-$style .='background-image: url('.$bg.'); background-position: '.$bgpos.';';
+$style .='background-image: url('.$bg.'); ';
 
 $style .='}';
 
