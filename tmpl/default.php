@@ -27,6 +27,8 @@ $doc = JFactory::getDocument();
      $item = $params->get('items'); 
      $ht =  $params->get('sliderheight');
      $htsm =  $params->get('sliderheightsm');
+     $bgpos = $params->get('bgpos');
+     $bgpossm = $params->get('bgpossm');
      $fade = $params->get('fade',0);
      $titleColor = $params->get('title-color');
      $titleSize = $params->get('title-size');
@@ -51,7 +53,7 @@ $style .= '.swiper-slide .introtext{font-size:'.$textSize.'; color:'.$textColor.
       height:'.$htsm.';}';
 
       $style .= '.swiper-slide h1{font-size:'.$titleSizeSmall.'; }';
-      $style .= '.swiper-slide .introtext{font-size: 85%;}';
+      $style .= '.swiper-slide .introtext{font-size: 16px;}';
       $style .= '.swiper-slide .btn{ padding: 8px 12px; font-size:90%}';
       $style .= '.swiper-button-next, .swiper-button-prev{display:none;}';
   $style .='}';
@@ -113,7 +115,7 @@ if(empty($item))
         
         
 $style .= '.slide-'.$i.'{';
-$style .='background-image: url('.$bg.');';
+$style .='background-image: url('.$bg.'); background-position: '.$bgpos.';';
 
 $style .='}';
 
@@ -123,7 +125,7 @@ $style.='@media(max-width:1024px) and (orientation:portrait){';
   
     
      $style .='.slide-'.$i.'{background-image: url('.$bgsm.');';
-     $style .='background-position:bottom center;';
+     $style .='background-position:'.$bgpossm.';';
     
     $style .='}}';
         ?>

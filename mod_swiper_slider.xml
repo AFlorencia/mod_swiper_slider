@@ -38,6 +38,41 @@
 			<fieldset name="basic">
 				<field type="text" name="sliderheight" label="Slider Height" default ="100vh"/>
 				<field type="text" name="sliderheightsm" label="Slider Height Mobile" default="100vh" />
+				<field type="list" name="bgpos" label="Background Position" default="center center" >
+				
+<option value="center center">center center</option>
+<option value="center left">center left</option>
+<option value="center right">center right</option>
+<option value="top left">top left</option>
+<option value="top right">top right</option>
+<option value="top center">top center</option>
+<option value="bottom left">bottom left</option>
+<option value="bottom right">bottom right</option>
+<option value="bottom center">bottom center</option>
+
+
+
+				</field>
+
+
+
+
+	<field type="list" name="bgpossm" label="Background Position" default="center center" >
+				
+<option value="center center">center center</option>
+<option value="center left">center left</option>
+<option value="center right">center right</option>
+<option value="top left">top left</option>
+<option value="top right">top right</option>
+<option value="top center">top center</option>
+<option value="bottom left">bottom left</option>
+<option value="bottom right">bottom right</option>
+<option value="bottom center">bottom center</option>
+
+
+
+				</field>
+
 			<field name="fade" type="list" label="Habilitar aparecer" default="0">
 
 				<option value="1">JYES</option>
