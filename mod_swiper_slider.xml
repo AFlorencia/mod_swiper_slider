@@ -36,7 +36,8 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field type="text" name="sliderheight" label="Slider Height" />
+				<field type="text" name="sliderheight" label="Slider Height" default ="100vh"/>
+				<field type="text" name="sliderheightsm" label="Slider Height Mobile" default="100vh" />
 			<field name="fade" type="list" label="Habilitar aparecer" default="0">
 
 				<option value="1">JYES</option>

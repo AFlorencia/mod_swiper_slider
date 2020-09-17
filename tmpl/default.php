@@ -26,6 +26,7 @@ $doc = JFactory::getDocument();
      $i = 0;
      $item = $params->get('items'); 
      $ht =  $params->get('sliderheight');
+     $htsm =  $params->get('sliderheightsm');
      $fade = $params->get('fade',0);
      $titleColor = $params->get('title-color');
      $titleSize = $params->get('title-size');
@@ -47,7 +48,7 @@ $style .= '.swiper-slide .introtext{font-size:'.$textSize.'; color:'.$textColor.
   $style.='@media(max-width:1024px) and (orientation:portrait){';
     $style .= '.swiper-container {
     
-      height:75vh;}';
+      height:'.$htsm.';}';
 
       $style .= '.swiper-slide h1{font-size:'.$titleSizeSmall.'; }';
       $style .= '.swiper-slide .introtext{font-size: 85%;}';
