@@ -90,7 +90,7 @@ if(empty($item))
         <div class="swiper-slide slide-<?php echo $i; ?>">
             <div class="swiper-content">                
                 <div class="container">
-                    <div class="content">
+                    <div class="content" data-swiper-animation="animate__fade" data-duration="1.5s" data-delay="1s" data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
                     <h1 data-swiper-animation="animate__fadeInDown" data-duration="1.5s" data-delay="1s" data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
                     <?php echo $title; ?></h1>
                     <?php if($introText) : ?>
