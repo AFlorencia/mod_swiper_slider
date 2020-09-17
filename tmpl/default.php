@@ -50,6 +50,7 @@ $style .= '.swiper-slide .introtext{font-size:'.$textSize.'; color:'.$textColor.
       height:75vh;}';
 
       $style .= '.swiper-slide h1{font-size:'.$titleSizeSmall.'; }';
+      $style .= '.swiper-slide .introtext{font-size: smaller;}';
   $style .='}';
 
 $doc->addStyleDeclaration($style);
