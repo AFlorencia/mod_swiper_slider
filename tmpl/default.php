@@ -88,53 +88,66 @@ if(empty($item))
 
             ?>
         <div class="swiper-slide slide-<?php echo $i; ?>">
-            <div class="swiper-content">                
-                <div class="container">
-                    <div class="content" data-swiper-animation="animate__fade" data-duration="1.5s" data-delay="1s" data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
-                    <h1 data-swiper-animation="animate__fadeInDown" data-duration="1.5s" data-delay="1s" data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
-                    <?php echo $title; ?></h1>
-                    <?php if($introText) : ?>
-                    <div class="introtext"  data-swiper-animation="animate__fadeInUp" data-duration="1.5s" data-delay="2s" data-swiper-out-animation="animate__fadeOut" data-out-duration=".2s">
-                    <?php  echo $introText; ?></div>
-                    <?php endif; ?>
+        <?php 
+        
+           
+   $style .= '.slide-'.$i.'{';
+   $style .='background-image: url('.$bg.'); '.PHP_EOL;
+   
+   $style .='}'.PHP_EOL;
+   
+   
+   
+   $style.='@media(max-width:1024px) and (orientation:portrait){';
+     
+       
+        $style .='.slide-'.$i.'{background-image: url('.$bgsm.');'.PHP_EOL;
+        $style .='background-position:'.$bgpossm.';'.PHP_EOL;
+       
+       $style .='}'.PHP_EOL;
+     
+     $style .= '}'.PHP_EOL; ?>
 
-                    <?php if($datos->link || $datos->link2) : 
+     
+<div class="swiper-content">
+    <div class="container">
+        <div class="content" data-swiper-animation="animate__fade" data-duration="1.5s" data-delay="1s"
+            data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
+            <h1 data-swiper-animation="animate__fadeInDown" data-duration="1.5s" data-delay="1s"
+                data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
+                <?php echo $title; ?>
+            </h1>
+
+            <?php if($introText) { ?>
+            <div class="introtext" data-swiper-animation="animate__fadeInUp" data-duration="1.5s" data-delay="2s" data-swiper-out-animation="animate__fadeOut" data-out-duration=".2s">
+                <?php  echo $introText; ?>
+            </div>
+            <?php } ?>
+
+            <?php if($datos->link || $datos->link2) { 
 
                     $link = explode(',', $datos->link);
                     $link2 = explode(',', $datos->link2);
-                        
+             
+             ?>
+            <div class="btn-group" data-swiper-animation="animate__fadeIn" data-duration="1.5s" data-delay="3s"
+                data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
 
-                        ?>
-                    <div class="btn-group"   data-swiper-animation="animate__fadeIn" data-duration="1.5s" data-delay="3s" data-swiper-out-animation="animate__fadeOut"  data-out-duration=".4s">
-                  
-                   <a href="<?php echo $link[1];?>" class="btn btn-<?php echo $button1Style;?> <?php echo $buttonSize;?>">     <?php echo $link[0];?></a>
-                   <a href="<?php echo $link2[1];?>" class="btn btn-<?php echo $button2Style;?> <?php echo $buttonSize;?>">     <?php echo $link2[0];?></a>
-                    <?php endif; ?>
+                <a href="<?php echo $link[1];?>" class="btn btn-<?php echo $button1Style;?> <?php echo $buttonSize;?>">
+                    <?php echo $link[0];?></a>
+                <a href="<?php echo $link2[1];?>" class="btn btn-<?php echo $button2Style;?> <?php echo $buttonSize;?>">
+                    <?php echo $link2[0];?></a>
                     </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
+           
+        </div>
+    </div>
+</div>
+
+        
+         
         </div> 
-        <?php 
-        
-        
-$style .= '.slide-'.$i.'{';
-$style .='background-image: url('.$bg.'); '.PHP_EOL;
 
-$style .='}'.PHP_EOL;
-
-
-
-$style.='@media(max-width:1024px) and (orientation:portrait){';
-  
-    
-     $style .='.slide-'.$i.'{background-image: url('.$bgsm.');'.PHP_EOL;
-     $style .='background-position:'.$bgpossm.';'.PHP_EOL;
-    
-    $style .='}'.PHP_EOL;
-  
-  $style .= '}'.PHP_EOL;
-        ?>
         <?php $i++; endforeach; ?>
     </div>
     <div class="swiper-pagination swiper-pagination-white"></div>
