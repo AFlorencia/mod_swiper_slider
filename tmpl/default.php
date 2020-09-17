@@ -81,7 +81,7 @@ if(empty($item))
 
 
             ?>
-        <div class="swiper-slide slide-<?php echo $i; ?>" style="background-image:url(<?php echo $bg; ?>);">
+        <div class="swiper-slide slide-<?php echo $i; ?>">
             <div class="swiper-content">                
                 <div class="container">
                     <div class="content">
