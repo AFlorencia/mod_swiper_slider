@@ -137,7 +137,7 @@ if(empty($item))
                     <?php echo $link[0];?></a>
                 <a href="<?php echo $link2[1];?>" class="btn btn-<?php echo $button2Style;?> <?php echo $buttonSize;?>">
                     <?php echo $link2[0];?></a>
-                    </div>
+            </div>
             <?php } ?>
            
         </div>
