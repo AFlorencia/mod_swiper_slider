@@ -38,7 +38,7 @@ $style = '.swiper-container {
   width: 100%;
   height:'.$ht.';}';
 
-  $style .= '.swiper-slide{background-position: '.$bgpos.';}';
+  $style .= '.swiper-slide{ background-repeat: no-repeat;background-position: '.$bgpos.';}';
 
 $style .= '.swiper-slide h1{font-size:'.$titleSize.'; color:'.$titleColor.'; }'.PHP_EOL;
 $style .= '.swiper-slide .introtext{font-size:'.$textSize.'; color:'.$textColor.';}';
