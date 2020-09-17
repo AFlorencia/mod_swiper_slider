@@ -183,7 +183,6 @@
     font-size: var(--swiper-navigation-size);
     text-transform: none !important;
     letter-spacing: 0;
-    text-transform: none;
     font-variant: initial;
     line-height: 1
 }
@@ -398,7 +397,7 @@ button.swiper-pagination-bullet {
     border-radius: 10px;
     position: relative;
     -ms-touch-action: none;
-    background: rgba(0, 0, 0, .1)
+    background: rgba(0, 0, 0, .1);
 }
 
 .swiper-container-horizontal>.swiper-scrollbar {
