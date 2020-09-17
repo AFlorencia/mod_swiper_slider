@@ -56,7 +56,7 @@ $style .= '.swiper-slide .introtext{font-size:'.$textSize.'; color:'.$textColor.
       $style .= '.swiper-button-next, .swiper-button-prev{display:none;}';
   $style .='}';
 
-$doc->addStyleDeclaration($style);
+
 
 ?>
 <?php
@@ -134,6 +134,14 @@ $style.='@media(max-width:1024px) and (orientation:portrait){';
     <div class="swiper-button-next swiper-button-white"></div>
     <div class="swiper-button-prev swiper-button-white"></div>
 </div>
+
+
+<?php 
+
+
+$doc->addStyleDeclaration($style);
+
+?>
 
 <!-- Initialize Swiper -->
 <script>
