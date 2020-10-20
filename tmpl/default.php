@@ -3,7 +3,7 @@
 # ------------------------------------------------------------------------
 # Swiper Animated Module with Custom Slides
 # ------------------------------------------------------------------------
-# Copyright(C) 20120 www.intergraphix.com.ar. All Rights Reserved.
+# Copyright(C) 2020 www.intergraphix.com.ar. All Rights Reserved.
 # @license http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL
 # Author: http://intergraphix.com.ar
 ------------------------------------------------------------------------
@@ -111,8 +111,7 @@ if(empty($item))
      
 <div class="swiper-content">
     <div class="container">
-        <div class="content" data-swiper-animation="animate__fade" data-duration="1.5s" data-delay="1s"
-            data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
+        <div class="content" data-swiper-animation="animate__fadeIn">
             <h1 data-swiper-animation="animate__fadeInDown" data-duration="1.5s" data-delay="1s"
                 data-swiper-out-animation="animate__fadeOut" data-out-duration=".4s">
                 <?php echo $title; ?>
@@ -135,8 +134,7 @@ if(empty($item))
 
                 <a href="<?php echo $link[1];?>" class="btn btn-<?php echo $button1Style;?> <?php echo $buttonSize;?>">
                     <?php echo $link[0];?></a>
-                <a href="<?php echo $link2[1];?>" class="btn btn-<?php echo $button2Style;?> <?php echo $buttonSize;?>">
-                    <?php echo $link2[0];?></a>
+               
             </div>
             <?php } ?>
            
@@ -166,11 +164,14 @@ $doc->addStyleDeclaration($style);
 
 <!-- Initialize Swiper -->
 <script>
-var swiperAnimation = new SwiperAnimation();
-var swiper = new Swiper('#swipper-<?php echo $module->id; ?>', {
-    autoHeight: false,  
+const swiperAnimation = new SwiperAnimation();
+const swiper = new Swiper('#swipper-<?php echo $module->id; ?>', {
+
+  autoHeight: false,  
   spaceBetween: 0,
   loop:true,
+  observer: true,
+observeParents: true,
 <?php if($fade=='1'){ ?>  effect: 'fade',<?php } ?>
    autoplay: {
 		delay: 4500,
@@ -191,12 +192,14 @@ var swiper = new Swiper('#swipper-<?php echo $module->id; ?>', {
         prevEl: '.swiper-button-prev',
       },
       on: {
-      init: function () {
-        swiperAnimation.init(this).animate();
-      },
-      slideChange: function () {
-        swiperAnimation.init(this).animate();
-      }
+    init: function () {
+      swiperAnimation.init(this).animate();
+    },
+    slideChange: function () {
+     
+      swiperAnimation.init(this).animate();
     }
+  }
     });
+    swiper.init();
 </script>

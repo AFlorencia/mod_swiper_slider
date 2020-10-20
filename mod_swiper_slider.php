@@ -24,12 +24,6 @@ defined('_JEXEC') or die('Restricted access');
 $moduleclass_sfx 	= $params->get('moduleclass_sfx', '');
 
 
-
-
-$displayCaptions	= $params->get('displayCaptions', 1);
-
-
-
 // display layout
 require JModuleHelper::getLayoutPath('mod_swiper_slider', $params->get('layout', 'default'));
 
@@ -40,5 +34,7 @@ $document = JFactory::getDocument();
 
 $document->addScript(JURI::base(true) . '/modules/mod_swiper_slider/assets/js/swiper.min.js');
 $document->addScript(JURI::base(true) . '/modules/mod_swiper_slider/assets/js/swiper.animation.min.js');
+$document->addScript(JURI::base(true) . '/modules/mod_swiper_slider/assets/js/jquery.easing.min.js');
 $document->addStylesheet(JURI::base(true) . '/modules/mod_swiper_slider/assets/css/swiper.min.css');
 $document->addStylesheet(JURI::base(true) . '/modules/mod_swiper_slider/assets/css/animate.min.css');
+
